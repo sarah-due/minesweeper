@@ -8,6 +8,8 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background-color: #438496;
+  font-family: 'Nunito', sans-serif;
 }
 
 #message, #notes {
@@ -17,7 +19,11 @@ body {
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #f7c33e;
+
 }
 
 .board {
@@ -26,25 +32,23 @@ body {
 }
 
 .board div {
-  color: green;
+  color: white;
+  background-color: #f93a4f;
   font-size: 2rem;
   width: 75px;
   height: 75px;
   border: 1px #ccc dotted;
   border-radius: 10%;
-  background-color: white;
   margin: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.board div:hover {
-  background-color: white;
-}
+
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") crimson;
+  background: no-repeat center/60% url("images/spinach.jpg") white;
 }
 
 div.hidden {
@@ -52,9 +56,9 @@ div.hidden {
 }
 
 div.hidden:hover {
-  background: #ccc;
+  background: #f7c33e;
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+  background: no-repeat center/60% url("images/donut.png") #cef7f2;
 }

@@ -153,8 +153,8 @@ function checkForWin () {
         return;
       }
     }
-    if (countMarked = 15) {
-        lib.displayMessage('You win!');
+    if (countMarked = 24) {
+        lib.displayMessage('Donuts for everyone!');
         }
   //   lib.displayMessage('You win!')
 }
