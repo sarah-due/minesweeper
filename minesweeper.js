@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', startGame)
 var board = {
   cells: [ { row: 0,
              col: 0,
-             isMine: false,
+             isMine: true,
              hidden: true },
 
            { row: 0,
@@ -13,6 +13,16 @@ var board = {
 
            { row: 0,
              col: 2,
+             isMine: false,
+             hidden: true },
+
+           { row: 0,
+             col: 3,
+             isMine: false,
+             hidden: true },
+
+           { row: 0,
+             col: 4,
              isMine: false,
              hidden: true },
 
@@ -31,6 +41,16 @@ var board = {
              isMine: false,
              hidden: true },
 
+           { row: 1,
+             col: 3,
+             isMine: false,
+             hidden: true },
+
+           { row: 1,
+             col: 4,
+             isMine: false,
+             hidden: true },
+
            { row: 2,
              col: 0,
              isMine: false,
@@ -43,6 +63,66 @@ var board = {
 
            { row: 2,
              col: 2,
+             isMine: false,
+             hidden: true },
+
+           { row: 2,
+             col: 3,
+             isMine: false,
+             hidden: true },
+
+           { row: 2,
+             col: 4,
+             isMine: false,
+             hidden: true },
+
+           { row: 3,
+             col: 0,
+             isMine: false,
+             hidden: true },
+
+           { row: 3,
+             col: 1,
+             isMine: false,
+             hidden: true },
+
+           { row: 3,
+             col: 2,
+             isMine: false,
+             hidden: true },
+
+           { row: 3,
+             col: 3,
+             isMine: false,
+             hidden: true },
+
+           { row: 3,
+             col: 4,
+             isMine: false,
+             hidden: true },
+
+           { row: 4,
+             col: 0,
+             isMine: false,
+             hidden: true },
+
+           { row: 4,
+             col: 1,
+             isMine: false,
+             hidden: true },
+
+           { row: 4,
+             col: 2,
+             isMine: false,
+             hidden: true },
+
+           { row: 4,
+             col: 3,
+             isMine: true,
+             hidden: true },
+
+           { row: 4,
+             col: 4,
              isMine: false,
              hidden: true }
          ]
@@ -55,7 +135,7 @@ function startGame () {
     console.log(board.cells[i].surroundingMines);
   };
   document.addEventListener('click', checkForWin);
-  document.addEventListener('oncontextmenu', checkForWin);
+  document.addEventListener('contextmenu', checkForWin);
 };
 
 // Define this function to look for a win condition:
@@ -73,7 +153,7 @@ function checkForWin () {
         return;
       }
     }
-    if (countMarked = 9) {
+    if (countMarked = 15) {
         lib.displayMessage('You win!');
         }
   //   lib.displayMessage('You win!')
