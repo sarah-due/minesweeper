@@ -128,6 +128,8 @@ var board = {
          ]
        };
 
+
+
 function startGame () {
   lib.initBoard();
   for (var i = 0; i < board.cells.length; i++) {
@@ -138,6 +140,11 @@ function startGame () {
   document.addEventListener('contextmenu', checkForWin);
 };
 
+var flip = $("#woosh")[0];
+
+$('div').click(function() {
+ flip.play();
+});
 // Define this function to look for a win condition:
 //
 // 1. Are all of the cells that are NOT mines visible?
@@ -158,6 +165,8 @@ function checkForWin () {
         }
   //   lib.displayMessage('You win!')
 }
+
+
 
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding

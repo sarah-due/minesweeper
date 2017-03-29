@@ -26,6 +26,18 @@ body {
 
 }
 
+#restart {
+  margin-top: 1em;
+  padding:0.5em;
+  color: #f93a4f;
+  border: solid 0.25em #f93a4f;
+  background-color: #cef7f2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;
