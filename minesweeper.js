@@ -140,11 +140,19 @@ function startGame () {
   document.addEventListener('contextmenu', checkForWin);
 };
 
-var flip = $("#woosh")[0];
 
-$('div').click(function() {
- flip.play();
-});
+function soundClip(type) {
+  if (type==="win") {
+  var audio = document.getElementsByTagName('audio')[0];
+  audio.play();
+} else if (type==="lose") {
+  var audio = document.getElementsByTagName('audio')[1];
+  audio.play();
+  }
+};
+
+
+
 // Define this function to look for a win condition:
 //
 // 1. Are all of the cells that are NOT mines visible?
@@ -162,6 +170,7 @@ function checkForWin () {
     }
     if (countMarked = 24) {
         lib.displayMessage('Donuts for everyone!');
+        soundClip('win');
         }
   //   lib.displayMessage('You win!')
 }

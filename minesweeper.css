@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
-  background-color: #438496;
+  background-image: url('images/donutpaper.jpg');
   font-family: 'Nunito', sans-serif;
 }
 
@@ -19,10 +19,16 @@ body {
 }
 
 #message {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.15em;
-  color: #f7c33e;
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  text-align: center;
 
 }
 
@@ -36,6 +42,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-align: center;
+  display: flex;
 }
 
 .board {
