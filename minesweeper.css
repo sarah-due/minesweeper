@@ -56,7 +56,7 @@ body {
   font-size: 2rem;
   width: 75px;
   height: 75px;
-  border: 1px #ccc dotted;
+  border: 1px solid #f93a4f;
   border-radius: 10%;
   margin: 3px;
   display: flex;
