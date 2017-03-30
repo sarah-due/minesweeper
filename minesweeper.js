@@ -10,10 +10,10 @@ var board = {
 
 function startGame () {
   newBoard();
-  lib.initBoard();
   for (var i = 0; i < board.cells.length; i++) {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);
   };
+  lib.initBoard();
   document.addEventListener('click', checkForWin);
   document.addEventListener('contextmenu', checkForWin);
 };
@@ -28,7 +28,8 @@ function newBoard() {
           col: y,
           isMine: false,
           isMarked: false,
-          hidden: true
+          hidden: true,
+          surroundingMines: 0
         }
         board.cells.push(newCell);
     }
@@ -38,12 +39,13 @@ function newBoard() {
   var maxMines = 4;
   while (mineCount < maxMines) {
     var randomCell = Math.floor(Math.random() * 25)
-    if (!board.cells[randomCell].isMine) {
-        board.cells[randomCell].isMine
-          mineCount ++;
+    if (board.cells[randomCell].isMine === false) {
+        (board.cells[randomCell].isMine = true)
+          mineCount ++
       }
   }
-};
+}
+
 
 /// Code for winning and losing sound effects
 
